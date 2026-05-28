@@ -52,3 +52,43 @@ A Docker Container is a running instance of a Docker image where the application
 7. **Deploy Anywhere**
    The same container can run on any system without changing configuration.
 
+## Docker steps till deployment
+
+1. Install Docker.
+
+2. Develop the application code.
+
+3. Create a `Dockerfile` to define dependencies and setup.
+
+4. Build the Docker image.
+
+```bash id="it1tgw"
+docker build -t myapp .
+```
+
+5. Run and test the container locally.
+
+```bash id="5wv9ek"
+docker run myapp
+```
+
+6. Push the Docker image to a registry like [Docker Hub](https://hub.docker.com?utm_source=chatgpt.com).
+
+```bash id="7twn9e"
+docker push myapp
+```
+
+7. Pull the image on the server or cloud system.
+
+```bash id="0o83vl"
+docker pull myapp
+```
+
+8. Deploy and run the container on the production server.
+
+```bash id="tgh9ei"
+docker run -d myapp
+```
+
+   
+
